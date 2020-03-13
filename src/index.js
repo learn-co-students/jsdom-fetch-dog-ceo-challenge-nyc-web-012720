@@ -4,9 +4,6 @@ const breedUrl = 'https://dog.ceo/api/breeds/list/all'
 let ul = document.getElementById('dog-breeds')
 let selector = document.getElementById('breed-dropdown')
 
-console.log('%c HI', 'color: firebrick')
-
-
 document.addEventListener('DOMContentLoaded', function(){
     // dog images on load
     fetch(imgUrl)
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function(){
         return response.json()
     })
     .then(function(json){
-        console.log(json.message)
         function dogBreedIterator(dogBreedObject){
             for (dogBreed in dogBreedObject){
                 if (typeof dogBreed === 'object'){
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         breed.innerText = dogBreed + ":" + " " + json.message[dogBreed].join(", ")
                     }
                     ul.appendChild(breed)
-                    
+
                     if (!Array.from(selector.children).find(option => option.value === breed.innerText[0])){
                         let newOption = document.createElement('option')
                         newOption.value = breed.innerText[0]
