@@ -1,6 +1,6 @@
 # Fetch Dog CEO Challenge
 
-## Challenge 1
+x## Challenge 1
 
 This repository includes an `index.html` file that loads an `index.js` file.
 
@@ -17,7 +17,7 @@ Add JavaScript so that:
 
 ---
 
-## Challenge 2
+x## Challenge 2
 
 ```js
 const breedUrl = 'https://dog.ceo/api/breeds/list/all'
